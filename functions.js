@@ -5,3 +5,5 @@ export function clear(elementToClear){
 export function addWare(ulElement, ware){
     ulElement.innerHTML += `<li>${ware}</li>`
 }
+
+
