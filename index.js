@@ -13,25 +13,7 @@ const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const ulEl = document.getElementById("shopping-list")
 
-// let wares = []
-
-
-//Note to self: Learn JQuery
-
-// document.getElementById('items').getElementsByTagName('li').length >= 1
-// With JQuery: $('ul#items li').length >= 1
-
-//Adding hardcoded list items
-// let items = ulEl.querySelectorAll("li")
-// items.forEach(item => {
-//
-// });
-
-
 addButtonEl.addEventListener("click", function() {
-
-    ulEl.innerHTML = ""
-
     let inputValue = inputFieldEl.value
 
     push(shoppingListInDB, inputValue)
@@ -40,6 +22,9 @@ addButtonEl.addEventListener("click", function() {
 
 onValue(shoppingListInDB, function(snapshot){
     let itemsArray = Object.values(snapshot.val())
+
+    ulEl.innerHTML = ""
+
     console.log(snapshot.val())
 
 
