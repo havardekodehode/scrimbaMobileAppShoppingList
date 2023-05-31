@@ -11,7 +11,7 @@ export function clear(elementToClear){
    elementToClear.value = ""
 }
 
-export function addWare(ulElement, ware){
+export function addWare(ulElement, ware, percentage){
     // ulElement.innerHTML += `<li>${ware}</li>`
     let wareID = ware[0]
     const li = document.createElement("li")
